@@ -326,10 +326,10 @@ if __name__ == "__main__":
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
 
-    # Suppress LiteLLM logging
-    litellm_logger = logging.getLogger("LiteLLM")
-    litellm_logger.setLevel(logging.WARNING)
-    litellm_logger.propagate = False
+    # # Suppress LiteLLM logging
+    # litellm_logger = logging.getLogger("LiteLLM")
+    # litellm_logger.setLevel(logging.WARNING)
+    # litellm_logger.propagate = False
 
     parser = argparse.ArgumentParser(
         description="Run the Q1TemplateBot forecasting system"
@@ -368,6 +368,7 @@ if __name__ == "__main__":
         #     "summarizer": "openai/gpt-4o-mini",
         # },
     )
+    # template_bot._run_forecast_on_binary("Will the current chancelor of Germany lower")
 
     if run_mode == "tournament":
         forecast_reports = asyncio.run(
